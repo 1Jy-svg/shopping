@@ -7,7 +7,7 @@
         <p style="font-weight: bold;font-size: 40px;">{{data.title}}</p>
         <p style="font-size: 20px;">{{data.description}}</p>
         <div class="rating-container">
-            <span class="rating" *ngFor="let star of getStars(data.rating.rate)" style="display: flex;">
+            <span class="rating" *ngFor="let star of getStars(data.rating.rate)" style="display: inline;">
             <i [class]="'fa '+(star ? 'fa-solid':'fa-regular')+ ' fa-star'" style="color: goldenrod;" ></i>
             </span>
         </div>

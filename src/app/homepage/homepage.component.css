@@ -1,8 +1,7 @@
 /* Resetting Default Margin and Padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 8px;
+    padding: 0px;
     
   }
   
@@ -40,7 +39,7 @@
   }
   
   main {
-    padding: 20px;
+    padding: 12px;
   }
   
   .banner {
@@ -85,5 +84,9 @@
   }
   nav{
     background-color: lightblue;
+  }
+  .card-img-top{
+    height: 184px;
+    width: 200px;
   }
   

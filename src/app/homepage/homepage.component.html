@@ -11,42 +11,48 @@
 </head>
 <body>
   <section class="banner">
-    <h2 style="font-weight: bold;">WELCOME TO J-MART</h2>
+    <h2 style="font-weight: bold;font-size: 60px;">WELCOME TO J-MART</h2>
     <p>Makes shopping easier!</p>
   </section>
     
   <main>
    
-   
-
-    <section class="featured-products">
-
-      <div class="product">
-        <div id="carouselExample" class="carousel slide" style="margin:0px;height: 100%;">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://www.shutterstock.com/image-photo/full-length-body-size-view-600nw-2079264823.jpg" class="d-block w-100" alt="..." style="height:100%;width:1500px">
-              </div>
-              <div class="carousel-item">
-                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Consumables/X-GL/Feb5/PC_Hero_1_3000._CB582457311_.jpg" class="d-block w-230" alt="..." style="height:300px;width:300px">
-              </div>
-              <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXR5JTIwcHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" class="d-block w-230" alt="..."style="height:300px;width:300px">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg" class="d-block w-100" alt="..." style="height: 300px;width: 1500px;">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="https://i.pinimg.com/1200x/8f/c4/69/8fc46935246069c1b0d9dcd33c1bcce5.jpg" class="d-block w-100" alt="..." style="height: 300px;width: 1500px;">
+        </div>
+       
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" style="height: 300px;width: 1500px;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h5 style="color: black; font-weight: bold;font-size: 25px;font-family: Georgia, 'Times New Roman', Times, serif;">Offers of the day..</h5>
+    <div class="container">
+      <div class="row">
+         @for (item of districts; track $index){
+      <div class="col-sm-2" style="margin-right: 25px;">
+      <div class="card" style="width: 13rem;">
+        <img src={{item.image}} class="card-img-top" alt="..." style="height:180px;width:180px">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <button class="card-text"style="color: white;font-size: 17px; background-color: red;">{{item.text}}</button>
+        </div>
+      </div>
+      </div>
+         }
+      </div>
       </div>
       
-     
-    </section>
   </main>
   <app-footbar></app-footbar>
 </body>
