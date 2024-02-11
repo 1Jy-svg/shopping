@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="product.component.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<h1 class="text-center" style="font-weight:bold;font-family: 'Lobster', sans-serif;">GO FOR YOUR STYLE..</h1>
+<div class="container">
+<div class="row">
+ @for (item of data ; track $index){
+<div class="col-3 p-10 mt-3">
+<div class="card" style="width: 15rem; height:25rem">
+  <img src="{{item.image}}" class="card-img-top" alt="..." style="width:200px;height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title" style="font-size: 20px;font-family: cursive;">{{item.title}}</h5>
+    <p class="card-text">{{item.descriptin | slice : 0: 180}}</p>
+    <a routerLink="{{item.id}}" class="btn btn-primary">${{item.price}}</a>
+  </div>
+</div>
+</div>
+ }
+</div>
+<app-footbar></app-footbar>
+</div>

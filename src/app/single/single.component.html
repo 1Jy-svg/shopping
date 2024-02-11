@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="left">
+        <img src="{{data.image}}" alt="" style="height: 200px;width: 200px;">
+    </div>
+    <div class="con">
+        <p style="font-weight: bold;font-size: 40px;">{{data.title}}</p>
+        <p style="font-size: 20px;">{{data.description}}</p>
+        <div class="rating-container">
+            <span class="rating" *ngFor="let star of getStars(data.rating.rate)" style="display: flex;">
+            <i [class]="'fa '+(star ? 'fa-solid':'fa-regular')+ ' fa-star'" style="color: goldenrod;" ></i>
+            </span>
+        </div>
+<button class="btn-primary" style="background-color: lightblue;color: white;">${{data.price}}</button>
+    </div>
+  </div>
+  
